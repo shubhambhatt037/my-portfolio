@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 const projectsData = [
   {
@@ -40,77 +39,31 @@ const projectsData = [
   },
 ];
 
-const Container = styled.div`
-  background-color: #02050a;
-  padding-top: 4rem;
-  padding-bottom: 1rem;
-`;
-
-const Wrapper = styled.div`
-  width: 80%;
-  padding-top: 2rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`;
-
-const ProjectCard = styled.div`
-  transform: translateY(0);
-  transition: transform 0.2s ease;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  }
-`;
-
-const ProjectImage = styled.img`
-  object-fit: cover;
-  width: 100%;
-  height: 200px;
-`;
-
-const ProjectInfo = styled.div`
-  padding: 1rem;
-  background-color: #1a1a1a;
-  color: white;
-`;
-
 const Projects = () => {
   return (
-    <Container id="projects">
+    <div id="projects">
+    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]" >
       <h1 className="heading">
         PRO<span className="text-yellow-400">JECTS</span>
       </h1>
-      <Wrapper>
+      <div className="w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
         {projectsData.map((project, index) => (
-          <ProjectCard key={index} data-aos="fade-up" data-aos-delay={`${300 * index}`}>
-            <ProjectImage src={project.image} alt={project.name} />
-            <ProjectInfo>
+          <div key={index} data-aos="fade-up" data-aos-delay={`${300 * index}`}>
+            <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-full h-[200px] md:h-[300px]">
+              <img src={project.image} alt={project.name} className="object-cover w-full h-full" />
+            </div>
+            <div className="text-white mt-2">
               <h3 className="text-lg font-semibold">{project.name}</h3>
               <p className="text-sm">{project.description}</p>
               <a href={project.githubLink} className="text-blue-500 hover:underline" rel="noopener noreferrer">
                 GitHub Link
               </a>
-            </ProjectInfo>
-          </ProjectCard>
+            </div>
+          </div>
         ))}
-      </Wrapper>
-    </Container>
+      </div>
+    </div>
+    </div>
   );
 };
 
