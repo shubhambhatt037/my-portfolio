@@ -1,86 +1,60 @@
-import {
-  DevicePhoneMobileIcon,
-  EnvelopeIcon,
-  MapIcon,
-} from "@heroicons/react/16/solid";
-import React from "react";
+import styled from 'styled-components';
+import { Facebook, Twitter, LinkedIn, Instagram } from '@mui/icons-material';
 
-const Footer = () => {
+const FooterContainer = styled.footer`
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #02050a;
+  color: white;
+`;
+
+const FooterWrapper = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Logo = styled.h1`
+  font-weight: 600;
+  font-size: 20px;
+  color: #F0FFF0;
+`;
+
+const SocialMediaIcons = styled.div`
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`;
+
+const SocialMediaIcon = styled.a`
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: grey;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+
+const Footer: React.FC = () => {
   return (
-    <div className="pt-[8rem] pb-[4rem] bg-[#02050a]">
-      <div className="grid border-b-[1px] pb-[6rem] border-gray-400 grid-cols-1 1g:grid-cols-3 md:grid-cols-3 w-[80%] mx-auto gap-[3rem]">
-        <div className="flex items-center space-x-6">
-          <div className="md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-[#55e6a5]">
-            <MapIcon className="md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black" />
-          </div>
-          <div>
-            <h1 className="text-[25px] mb-[0.2rem] font-semibold text-[white] ">
-              Address
-            </h1>
-            <p className="text-[17px] w-[90%] text-white opacity-60">
-              Gate No. 3 ITBP
-              Seemadwar, 248146
-              Dehradun, Uttarakhand<br></br>
-              India
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center space-x-6">
-          <div className="md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-[#55e6a5]">
-            <DevicePhoneMobileIcon className="md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black" />
-          </div>
-          <div>
-            <h1 className="text-[25px] mb-[0.2rem] font-semibold text-[white] ">
-              Phone
-            </h1>
-            <p className="text-[17px] w-[90%] text-white opacity-60">
-              +918979922385
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center space-x-6">
-          <div className="md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-[#55e6a5]">
-            <EnvelopeIcon className="md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black" />
-          </div>
-          <div>
-            <h1 className="text-[25px] mb-[0.2rem] font-semibold text-[white] ">
-              Email
-            </h1>
-            <p className="text-[17px] w-[90%] text-white opacity-60">
-              shubhambhatt037@gmail.com
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="w-[80%] mt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-between">
-        <div className="text-[16px] mb-[2rem] md:mb-0 text-white opacity-20">
-          SHUBHAM BHATT | All Rights Reserved
-        </div>
-        <div className="flex items-center space-x-10">
-          <p
-            className="text-[16px]
-text-white opacity-20"
-          >
-            Terms & Condition
-          </p>
-
-          <p
-            className="text-[16px]
-text-white opacity-20"
-          >
-            Privacy Policy
-          </p>
-
-          <p
-            className="text-[16px]
-text-white opacity-20"
-          >
-            Sitemap
-          </p>
-        </div>
-      </div>
-    </div>
+    <FooterContainer>
+      <FooterWrapper>
+        <Logo>Shubham Bhatt</Logo>
+        <SocialMediaIcons>
+          <SocialMediaIcon href="https://twitter.com/Shubham32189699" target="_blank"><Twitter /></SocialMediaIcon>
+          <SocialMediaIcon href="https://www.linkedin.com/in/shubham-bhatt-48b002250/" target="_blank"><LinkedIn /></SocialMediaIcon>
+          <SocialMediaIcon href="https://www.instagram.com/shubhambhatt037/" target="_blank"><Instagram /></SocialMediaIcon>
+        </SocialMediaIcons>
+        <p className='text-gray-500'>&copy; 2024 Shubham Bhatt. All rights reserved.</p>
+      </FooterWrapper>
+    </FooterContainer>
   );
-};
+}
 
 export default Footer;

@@ -9,6 +9,8 @@ import Skills from "@/Components/Skills";
 import React, { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Contact from "@/Components/Contact";
+import EducationPage from "@/Components/Education";
 
 const HomePage = () => {
   const [nav, setNav] = useState(false);
@@ -18,8 +20,7 @@ const HomePage = () => {
 useEffect(()=>{
   AOS.init();
 
-// You can also pass an optional settings object
-// below listed default settings
+
 AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -51,9 +52,10 @@ AOS.init({
         <Hero />
         <div className="relative z-[30]">
           <About />
-          <Services />
-          <Skills />
+          <EducationPage />
           <Projects />
+          <Skills />
+          <Contact />
           <Footer />
         </div>
       </div>
