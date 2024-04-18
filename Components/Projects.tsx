@@ -41,16 +41,7 @@ const projectsData = [
 ];
 
 const Container = styled.div`
-  background-color: #121121;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 30px 0px 0px; /* Adjust padding as needed */
-  @media (max-width: 960px) {
-    padding: 0px;
-    margin: 0px;
-  }
+ 
 `;
 
 const Projects = () => {
