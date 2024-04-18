@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const projectsData = [
   {
@@ -39,9 +40,22 @@ const projectsData = [
   },
 ];
 
+const Container = styled.div`
+  background-color: #121121;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px 0px 0px; /* Adjust padding as needed */
+  @media (max-width: 960px) {
+    padding: 0px;
+    margin: 0px;
+  }
+`;
+
 const Projects = () => {
   return (
-    <div id="projects">
+    <Container id="projects">
     <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]" >
       <h1 className="heading">
         PRO<span className="text-yellow-400">JECTS</span>
@@ -63,7 +77,7 @@ const Projects = () => {
         ))}
       </div>
     </div>
-    </div>
+    </Container>
   );
 };
 
