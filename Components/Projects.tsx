@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 const projectsData = [
   {
@@ -40,14 +39,9 @@ const projectsData = [
   },
 ];
 
-const Container = styled.div`
- 
-`;
-
 const Projects = () => {
   return (
-    <Container id="projects">
-    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]" >
+    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]" id="projects">
       <h1 className="heading">
         PRO<span className="text-yellow-400">JECTS</span>
       </h1>
@@ -68,7 +62,6 @@ const Projects = () => {
         ))}
       </div>
     </div>
-    </Container>
   );
 };
 
