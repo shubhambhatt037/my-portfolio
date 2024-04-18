@@ -1,7 +1,7 @@
 import React from "react";
 import Particle from "./Particle";
 import TextEffect from "./TextEffect";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { ArrowDownTrayIcon } from "@heroicons/react/16/solid";
 
 interface Cta {
