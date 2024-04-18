@@ -3,12 +3,34 @@ import Particle from "./Particle";
 import TextEffect from "./TextEffect";
 import Image from "next/legacy/image";
 import { ArrowDownTrayIcon } from "@heroicons/react/16/solid";
+import styled from "styled-components";
 
 interface Cta {
   title: string;
   url: string;
   sameTab: boolean;
 }
+
+const Container = styled.div`
+  height: 88vh;
+  margin-top: 10vh;
+  padding: 50px;
+  background-image: url('/images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+`;
+
+const ContentWrapper = styled.div`
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
 
 const Hero: React.FC = () => {
   const resumePath = '/Shubham-Resume.pdf';
@@ -27,11 +49,11 @@ const Hero: React.FC = () => {
   };
   
   return (
-    <div className="h-[88vh] bg-[url('/images/banner.jpg')] mt-[10vh] bg-cover bg-center" id="home">
+    <Container id="home">
       <Particle />
-      <div className="w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2  h-[100%] items-center">
+      <ContentWrapper>
         <div>
-          <h1 className="text-[35px] md:text-[50px] text-white font-bold ">
+          <h1 className="text-[35px] md:text-[50px] text-white font-bold">
             HI, I'M <span className="text-yellow-400">SHUBHAM </span>
           </h1>
           <TextEffect />
@@ -61,10 +83,9 @@ const Hero: React.FC = () => {
             style={{ maxWidth: "100%" }}
           />
         </div>
-      </div>
-    </div>
+      </ContentWrapper>
+    </Container>
   );
 };
 
 export default Hero;
-
