@@ -1,4 +1,3 @@
-import Image from "next/legacy/image";
 import React from "react";
 
 const projectsData = [
@@ -49,21 +48,13 @@ const Projects = () => {
       <div className="w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
         {projectsData.map((project, index) => (
           <div key={index} data-aos="fade-up" data-aos-delay={`${300 * index}`}>
-            <div
-              className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative 
-            w-[100%] h-[200px] md:h-[300px]"
-            >
-              <Image
-                src={project.image}
-                alt={project.name}
-                layout="fill"
-                className="object-contain"
-              />
+            <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-full h-[200px] md:h-[300px]">
+              <img src={project.image} alt={project.name} className="object-cover w-full h-full" />
             </div>
             <div className="text-white mt-2">
               <h3 className="text-lg font-semibold">{project.name}</h3>
               <p className="text-sm">{project.description}</p>
-              <a href={project.githubLink} className="text-blue-500 hover:underline">
+              <a href={project.githubLink} className="text-blue-500 hover:underline" rel="noopener noreferrer">
                 GitHub Link
               </a>
             </div>
