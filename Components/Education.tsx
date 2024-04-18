@@ -28,9 +28,6 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1350px;
   padding: 40px 0px 0px 0px;
-  // @media (max-width: 960px) {
-  //   flex-direction: column;
-  // }
 `;
 
 const Title = styled.h1`
@@ -40,10 +37,6 @@ const Title = styled.h1`
   color: #f0e68c;
   margin-bottom: 20px;
   padding: 0px 0px 0px 50px;
-  // @media (max-width: 768px) {
-  //   margin-top: 12px;
-  //   font-size: 32px;
-  // }
 `;
 
 const TimelineSection = styled.div`
@@ -72,7 +65,6 @@ const EducationCard = styled.div`
   }
   outline: 2px solid #854CE6;
   @media (max-width: 768px) {
-
     padding; 10px;
 }
 `;

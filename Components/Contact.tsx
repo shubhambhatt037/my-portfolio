@@ -1,9 +1,10 @@
+import React from 'react';
 import ContactForm from './ContactForm';
 import styled from 'styled-components';
 
 const Container = styled.div`
   background-color: #121121; /* Set background color */
-  height: 80vh; /* Set height to 80% of the viewport height */
+  height: 100%; /* Set height to 100% */
   display: flex;
   flex-direction: column; /* Adjust to column layout */
   align-items: center;

@@ -1,17 +1,17 @@
+import React from 'react';
 import { useForm } from '@formspree/react';
-import clsx from 'clsx';
 import { Formik, Form, FastField, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Recaptcha from 'react-google-recaptcha';
 import styled from 'styled-components';
 
 const FormContainer = styled.div`
-  background-color: white; /* Set background color for the box */
-  padding: 2rem; /* Adjust padding as needed */
-  border-radius: 8px; /* Add border radius for the box */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for the box */
-  max-width: 400px; /* Set max-width for the box */
-  width: 100%; /* Make the box responsive */
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 `;
 
 const ContactForm: React.FC = () => {
@@ -65,44 +65,29 @@ const ContactForm: React.FC = () => {
             <FastField
               type="text"
               name="name"
-              component="input"
-              aria-label="name"
               placeholder="Full name*"
-              className={clsx('input', {
-                'input-error': touched.name && errors.name,
-              })}
-              style={{ width: '100%' }} 
+              className="input"
+              style={{ width: '100%' }}
             />
             <ErrorMessage className="text-red-600 block mt-1" component="span" name="name" />
           </div>
           <div className="relative mb-4">
             <FastField
-              id="email"
-              aria-label="email"
-              component="input"
               type="email"
               name="email"
               placeholder="Email*"
-              className={clsx('input', {
-                'input-error': touched.email && errors.email,
-              })}
-              style={{ width: '100%' }} 
+              className="input"
+              style={{ width: '100%' }}
             />
             <ErrorMessage className="text-red-600 block mt-1" component="span" name="email" />
           </div>
           <div className="relative mb-4">
             <FastField
               component="textarea"
-              aria-label="message"
-              id="message"
-              rows="8"
-              type="text"
               name="message"
               placeholder="Message*"
-              className={clsx('input', {
-                'input-error': touched.message && errors.message,
-              })}
-              style={{ width: '100%' }} 
+              className="input"
+              style={{ width: '100%' }}
             />
             <ErrorMessage className="text-red-600 block mt-1" component="span" name="message" />
           </div>
@@ -120,7 +105,9 @@ const ContactForm: React.FC = () => {
           {state.succeeded && (
             <div className="relative mb-4">
               <div className="text-center">
-                <h4 className="font-normal">Your message has been successfully sent, I will get back to you ASAP!</h4>
+                <h4 className="font-normal">
+                  Your message has been successfully sent, I will get back to you ASAP!
+                </h4>
               </div>
             </div>
           )}
