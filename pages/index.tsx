@@ -4,7 +4,6 @@ import Hero from "@/Components/Hero";
 import MobileNav from "@/Components/MobileNav";
 import Nav from "@/Components/Nav";
 import Projects from "@/Components/Projects";
-import Services from "@/Components/Services";
 import Skills from "@/Components/Skills";
 import React, { useEffect, useState } from "react";
 import AOS from 'aos';

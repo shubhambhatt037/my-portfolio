@@ -41,7 +41,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]" id="projects">
+    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]">
       <h1 className="heading">
         PRO<span className="text-yellow-400">JECTS</span>
       </h1>
