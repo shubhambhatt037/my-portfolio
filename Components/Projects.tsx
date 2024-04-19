@@ -35,13 +35,13 @@ const projectsData = [
     name: "Sentiment Analysis",
     image: "/images/twitter.jpeg",
     description: "Analysis of sentiments in tweets",
-    githubLink: "https://github.com/username/project6",
+    githubLink: "https://github.com/shubhambhatt037/QuickInfoBot",
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]">
+    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]" id="projects">
       <h1 className="heading">
         PRO<span className="text-yellow-400">JECTS</span>
       </h1>
