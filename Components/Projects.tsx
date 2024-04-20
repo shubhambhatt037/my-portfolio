@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const projectsData = [
   {
@@ -49,7 +50,7 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <div key={index} data-aos="fade-up" data-aos-delay={`${300 * index}`}>
             <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-full h-[200px] md:h-[300px]">
-              <img src={project.image} alt={project.name} className="object-cover w-full h-full" />
+              <Image src={project.image} alt={project.name} layout="fill" objectFit="cover" />
             </div>
             <div className="text-white mt-2">
               <h3 className="text-lg font-semibold">{project.name}</h3>
