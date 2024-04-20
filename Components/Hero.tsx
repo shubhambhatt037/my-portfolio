@@ -11,23 +11,26 @@ interface Cta {
 }
 
 const Hero: React.FC = () => {
-  const resumePath = '/Shubham-Resume.pdf';
+  const resumePath = "/Shubham-Resume.pdf";
   const cta: Cta = {
     title: "Download Resume",
     url: resumePath,
-    sameTab: false, 
+    sameTab: false,
   };
 
   const handleDownloadResume = () => {
     if (cta.sameTab) {
-      window.open(cta.url, '_self');
+      window.open(cta.url, "_self");
     } else {
-      window.open(cta.url, '_blank');
+      window.open(cta.url, "_blank");
     }
   };
-  
+
   return (
-    <div className="h-[88vh] bg-[url('/images/banner.jpg')] mt-[10vh] bg-cover bg-center" id="home">
+    <div
+      className="h-[88vh] bg-[url('/images/banner.jpg')] mt-[10vh] bg-cover bg-center"
+      id="home"
+    >
       <Particle />
       <div className="w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2  h-[100%] items-center">
         <div>
@@ -36,7 +39,8 @@ const Hero: React.FC = () => {
           </h1>
           <TextEffect />
           <p className="mt-[1.5rem] text-[18px] text-[#ffffff92]">
-            A relentless problem solver and tech enthusiast, driven by ambition and a commitment to lifelong learning.
+            A relentless problem solver and tech enthusiast, driven by ambition
+            and a commitment to lifelong learning.
           </p>
           <div className="mt-[2rem] flex-col space-y-6 sm:space-y-0 sm:flex sm:flex-row items-center sm:space-x-6">
             <button
@@ -57,8 +61,7 @@ const Hero: React.FC = () => {
             layout="intrinsic"
             width={500}
             height={500}
-            className="object-cover rounded-full"
-            style={{ maxWidth: "100%" }}
+            className="object-cover rounded-full max-w-full"
           />
         </div>
       </div>
@@ -67,4 +70,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-

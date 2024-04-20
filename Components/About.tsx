@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/16/solid";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 interface Cta {
   title: string;
