@@ -15,7 +15,7 @@ const Nav: React.FC<Props> = ({ openNav }) => {
     const router = useRouter(); // useRouter hook to access router information
 
     // Function to handle smooth scrolling to the anchor
-    const scrollToSection = (id: string) => {
+    const scrollToSection = (id: string): void => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: "smooth" });
@@ -30,15 +30,11 @@ const Nav: React.FC<Props> = ({ openNav }) => {
                     <span className="text-yellow-300"> BHATT</span>
                 </h1>
                 <div className="flex space-x-6">
-                    {/* Use onClick event to scroll to section */}
+
                     <NavLink onClick={() => scrollToSection("home")}>HOME</NavLink>
-                    {/* Use onClick event to scroll to section */}
                     <NavLink onClick={() => scrollToSection("about")}>ABOUT</NavLink>
-                    {/* Use onClick event to scroll to section */}
                     <NavLink onClick={() => scrollToSection("projects")}>PROJECTS</NavLink>
-                    {/* Use onClick event to scroll to section */}
                     <NavLink onClick={() => scrollToSection("skills")}>SKILLS</NavLink>
-                    {/* Use onClick event to scroll to section */}
                     <NavLink onClick={() => scrollToSection("contact")}>CONTACT</NavLink>
                 </div>
                 <div onClick={openNav}>
@@ -49,7 +45,6 @@ const Nav: React.FC<Props> = ({ openNav }) => {
     );
 };
 
-// Custom NavLink component
 const NavLink: React.FC<NavLinkProps> = ({ onClick, children }) => {
     return (
         <span className="nav-link text-white" onClick={onClick}>

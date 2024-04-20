@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   const cta: Cta = {
     title: "Download Resume",
     url: resumePath,
-    sameTab: false, // Open in a new tab
+    sameTab: false, 
   };
 
   const handleDownloadResume = () => {
